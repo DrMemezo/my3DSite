@@ -5,7 +5,6 @@ import { MeshToonMaterial, MathUtils } from 'three/src/Three.Core.js'
 import { OrbitControls, PerspectiveCamera, useGLTF} from "@react-three/drei"
 
 
-
 const useScroll = () => {
     const [scrollData, setScrollData] = useState(0)
 
@@ -93,7 +92,7 @@ function ToonTourus(props){
 }
 
 function Monkey(props){
-  const { scene } = useGLTF("src/assets/monkey.glb")
+  const { scene } = useGLTF("/models/monkey.glb")
   const ref = useRef()
 
   scene.rotateY(13 * Math.PI / 180)
@@ -123,7 +122,7 @@ function Monkey(props){
 }
 
 function Donut(props){
-  const { scene } = useGLTF("src/assets/donut_alone_2.glb")
+  const { scene } = useGLTF("/models/donut_alone_2.glb")
   const ref = useRef()
   scene.scale.set(...Array(3).fill(props.scale))
 
@@ -139,7 +138,7 @@ function Donut(props){
 
   let angle = 0
   useFrame((state, delta) => {
-    angle += delta * 0.005
+    angle = delta * 0.2
     ref.current.rotateY(angle)
   })
 
@@ -152,7 +151,7 @@ function Donut(props){
 function CustomCamera(){
   const { camera } = useThree()
   const scrollPos = useScroll()
-  const [initial, scrollScale, scrollLimit] = [6.1, 0.023, 65]
+  const [initial, scrollScale, scrollLimit] = [6.1, 0.035, 65]
 
   useEffect(() => {
     const newZ = initial + (scrollPos * scrollScale)

@@ -159,12 +159,6 @@ function CustomCamera(){
 
     camera.position.setZ(clampedZ)
 
-    const handler = () => {
-      console.log(camera.position)
-    }
-    document.body.addEventListener('contextmenu', handler)
-    return () => {document.body.removeEventListener('contextmenu', handler)}
-
   }, [scrollPos, camera])
   // x: 3.130954479298693, y: 4.102344359629457, z: 6.177288567264989 
   return (<PerspectiveCamera makeDefault position={[3.1, 4.1, 6.1]}/>)

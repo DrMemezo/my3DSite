@@ -1,8 +1,10 @@
 html, body{
   height: 100%;
+  min-height: 100%;
   margin: unset;
   padding: 0;
 }
+
 
 #root {
   height: 100%;
@@ -25,14 +27,73 @@ main {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  min-height: 100%;
   top: 0;
   left: 0;
   z-index: 99;
   display: grid;
   grid-template-columns: repeat(12, 1fr); 
+  font-family: 'Montserrat', serif;
+}
+
+main::after{
+  display: block;
+  content: '';
+  height: 200vh;
 }
 
 main * {
   grid-column: 2 / span 3;
 }
 
+.imp {
+  font-weight: bold;
+  text-decoration: underline;
+  display: inline;
+}
+
+#too-slow {
+  background-color: black;
+  color: #FF8B33; 
+  border: 2px dashed #FF6E00;
+  border-radius: 20%;
+  padding: 0 20px;
+  grid-column: 10 / span 2; 
+}
+
+#whoami {
+  grid-column: 2 / span 5;
+  display: grid;
+  gap: 10px;
+  grid-template-areas: 
+  'whoami list list'
+  'whoami list list'
+  'bio bio bio'
+  'bio bio bio'
+  'bio bio bio';
+}
+
+#whoami > h2 {
+  grid-area: whoami; 
+}
+
+#whoami > ul {
+  grid-area: list;
+}
+
+#whoami > .bio{
+  grid-area: bio;
+}
+
+.outlined {
+  margin-left: max(10px, 1vw);
+  grid-column-start: 1;
+  border: 2px solid whitesmoke;
+}
+
+.rubricked {
+  font-family: "Rubik Vinyl", serif;
+  padding: 0 min(10px, 10vw);
+  width: max-content;
+  height: min-content;
+}

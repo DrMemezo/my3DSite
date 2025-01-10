@@ -31,6 +31,7 @@ main {
   top: 0;
   left: 0;
   z-index: 99;
+  gap: 5vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr); 
   font-family: 'Montserrat', serif;
@@ -52,14 +53,28 @@ main * {
   display: inline;
 }
 
+/* too slow text on the top left */
+
 #too-slow {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
   color: #FF8B33; 
   border: 2px dashed #FF6E00;
   border-radius: 20%;
   padding: 0 20px;
-  grid-column: 10 / span 2; 
+  grid-column: 10 / span 2;
+  align-items: center;
+  justify-content: center; 
 }
+
+@media screen and (max-width: 750px){
+  #too-slow {
+    grid-column: 2 / span 8;
+    margin: 0;
+  }
+}
+
+/* whoami */
 
 #whoami {
   grid-column: 2 / span 5;
@@ -84,6 +99,49 @@ main * {
 #whoami > .bio{
   grid-area: bio;
 }
+
+/* project */
+#projects {
+ width: 100%;
+}
+
+.project {
+  grid-column: 2 / span 8;
+  height: 20vh;
+  margin-bottom: 30vh;
+
+  transition: all 1s ease;
+}
+
+.project_title {
+  position: relative;
+}
+
+.project_title img {
+  width: clamp(200px, 20%, 20vw);
+  z-index: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: -5em;
+  left: 0;
+  z-index: -1;
+  transition: all 1s ease;
+}
+
+.project:hover{
+  margin-top: 5rem;
+}
+
+.project:hover img {
+  opacity: 1;
+  top: -7em;
+  
+}
+
+.project.right{
+  grid-column: 6 / span 8;
+}
+
 
 .outlined {
   margin-left: max(10px, 1vw);

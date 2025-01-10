@@ -12,7 +12,8 @@
   <body>
     <main>
       <h1 class="outlined rubricked"> Welcome to my website! </h1>
-      <p id="too-slow">Site loading too slow? Check out the <a href="https://drmemezo.github.io/my_site">old site!</a></p>
+      <h6 class="outlined" style="grid-column: 1 / span 12; width: fit-content; margin: 0;">Site still under development!</h6>
+      <div id="too-slow"><p>Site loading too slow? Check out the <a href="https://drmemezo.github.io/my_site">old site!</a></p></div>
       <span id="whoami">
         <h2 class="rubricked">whoami</h2>
         <ul>
@@ -21,18 +22,41 @@
           <li>Aspiring <b>Penteser</b></li>
         </ul>
         <div class="bio">Hello! My name is Jamal. Im currently a student studying at BCP PECHS Campus, but i have a fascination for everything tech! Though you may mostly see me coding in <div class="imp">Python</div> and improving my <div class="imp">Cyber Security</div> skills, you may also find me creating a game in <div class="imp">LOVE2D and Lua</div>, or just maybe <a href="">developing a website</a>!</div>
-      
       </span>
 
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem harum consequatur praesentium, repellendus autem magni ad necessitatibus officia alias expedita officiis rerum quos numquam quod consequuntur consectetur. Debitis, magni.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem harum consequatur praesentium, repellendus autem magni ad necessitatibus officia alias expedita officiis rerum quos numquam quod consequuntur consectetur. Debitis, magni.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem harum consequatur praesentium, repellendus autem magni ad necessitatibus officia alias expedita officiis rerum quos numquam quod consequuntur consectetur. Debitis, magni.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem harum consequatur praesentium, repellendus autem magni ad necessitatibus officia alias expedita officiis rerum quos numquam quod consequuntur consectetur. Debitis, magni.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem harum consequatur praesentium, repellendus autem magni ad necessitatibus officia alias expedita officiis rerum quos numquam quod consequuntur consectetur. Debitis, magni.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem harum consequatur praesentium, repellendus autem magni ad necessitatibus officia alias expedita officiis rerum quos numquam quod consequuntur consectetur. Debitis, magni.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem harum consequatur praesentium, repellendus autem magni ad necessitatibus officia alias expedita officiis rerum quos numquam quod consequuntur consectetur. Debitis, magni.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem harum consequatur praesentium, repellendus autem magni ad necessitatibus officia alias expedita officiis rerum quos numquam quod consequuntur consectetur. Debitis, magni.</p>
+        <h1>PROJECTS</h1>
+
+        <div class="project">
+          <header class="project_title"> 
+            <h3>Lethal ComPYny</h3> 
+            <img src="/logos/compyny_logo.png" alt="Compyny Logo">
+          </header>
+          <div class="project_description"> A CLI based game I made based on Lethal Company, using <b>Python</b>
+              This was also my final project for CS50P, a course offered by <b>Harvard</b>
+              Find it <a href="https://github.com/DrMemezo/compyny">here</a>
+          </div>
+          
+        </div>
+        <div class="project right">
+          <header class="project_title">
+            <h3>JimmyBird</h3>
+            <img src="/logos/jimmybird_logo.png" alt="JimmyBird logo">
+        </header>
+          <div class="project_description"> A <b>Flappy Bird</b> game I made using <b>LOVE2D and Lua</b> </div>
+        </div>
+
+        <div class="project">
+          <header class="project_title">
+            <h3>TCM Academy: PNPT</h3>
+            <img src="logos/tcm_logo.png" alt="TCM Security logo">
+          </header>
+          <div class="project_description"> Im on my way to being a certified <b>Practical Network Penetration Tester!</b>
+  
+          </div>
+        </div>
+      </span>
+
     </main>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
